@@ -1,3 +1,4 @@
+const promoData = ["=)","*?*" ,")("]; 
 const Promo = (props) => {
     return (
         <div className="promo__block">
@@ -14,14 +15,7 @@ const App = () => {
         <div>
             <h1>first page</h1>
             <div className="container" >
-                <Promo text="first" />
-                <Promo text="first" />
-
-                <Promo text="first" />
-
-                <Promo text={3 + 3} />
-
-                <Promo />
+             {promoData.map(el => <Promo text={el}/>) }
             </div>
         </div>
     )
