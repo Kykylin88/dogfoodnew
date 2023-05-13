@@ -1,0 +1,30 @@
+header {
+    background: orange;
+    padding: 12px 20px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+
+}
+footer{
+    padding: 12px 20px;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+       background-color: black;
+       color: yellow;
+
+}
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+
+}
+
+.logo ing {
+    height: 30px;
+
+}
