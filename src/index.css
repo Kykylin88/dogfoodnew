@@ -27,8 +27,10 @@ p {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   padding: 30px;
+ align-content: flex-start;
   gap: 20px;
 }
+.
 .search-result {
   grid-column-end: span 3;
   margin: 0;
