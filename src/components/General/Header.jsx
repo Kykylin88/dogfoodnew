@@ -1,24 +1,66 @@
 import Logo from "./Logo";
-import {BalloonHeart,
-     Cart4, 
-     PersonCircle, 
-     BuildingUp,
-      BuildingDown, 
-     } from "react-bootstrap-icons";
-const Header = () => {
-    return <header>
-        <Logo />
-    <div className="search-block"></div>
-<nav className="header__menu">
-    <a href=""><BalloonHeart/></a>
-    <a href=""><Cart4/></a>
-    <a href=""><PersonCircle/></a>
-    <span>
-        <BuildingUp/>
-        <BuildingDown/>
-    </span>
+import {
+    BalloonHeart,
+    Cart4,
+    PersonCircle,
+    BuildingUp,
+    BuildingDown,
+} from "react-bootstrap-icons";
 
-</nav>
+import Search from "../Search";
+
+
+const Header = ({ 
+    user, 
+    upd, 
+    searchArr, 
+    setGoods, 
+    setSearchResult 
+}) => {
+   
+    const login = () => {
+        localStorage.setItem("user12", " Sasha");
+        upd("Sasha");
+    }
+    
+    const logout = () => {
+        localStorage.removeItem("user12");
+        upd(null);
+    }
+
+    return <header>
+        
+        <Logo />
+        <div className="search-block">
+            
+            <Search
+                data={searchArr}
+                setGoods={setGoods}
+                setSearchResult={setSearchResult}
+            />
+        </div>
+       
+        <nav className="header__menu">
+            {user && <>
+                <a href="">
+
+                    <BalloonHeart title="Избранное" /></a>
+                <a href="">
+
+                    <Cart4 title="Корзина" /></a>
+                <a href="">
+
+                    <PersonCircle title="Личный кабинет" /></a>
+            </>}
+            <span>
+                
+                
+                {!user && <BuildingUp title="Войти" onClick={login} />}
+                
+                {user && <BuildingDown title="Выйти" onClick={logout} />}
+            </span>
+
+        </nav>
 
     </header>
 }
