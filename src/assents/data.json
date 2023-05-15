@@ -191,5 +191,18 @@
 		"available": true,
 		"stock": 10,
 		"pictures": "https://react-learning.ru/image-compressed/16.jpg"
+	},
+	{
+		"name": "кабаносики",
+		"price": 550,
+		"discount": 60,
+		"wight": "1000 г",
+		"description": "Описание demo",
+		"isFavorite": false,
+		"isCart": false,
+		"available": true,
+		"stock": 21,
+		"pictures": "https://lpravda.ru/Pictures/newslent/big/1646030497dklswseai0e.jpg",
+		"tags": ["new", "sale"]
 	}
 ]
