@@ -1,12 +1,13 @@
 import Logo from "./Logo"
 
 const links = [
-    { name: "Каталог", src: "/" },
+    { name: "Каталог", src: "/catalog" },
     { name: "Избранное", src: "/" },
-    { name: "Корзина", src: "/" }
+    { name: "Корзина", src: "/" },
+    {name: "Тестовая страница", src: "/old"}
 
 
-]
+];
 const Footer = () => <footer>
     <div className="footer__copy">
         <Logo />

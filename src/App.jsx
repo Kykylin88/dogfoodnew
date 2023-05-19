@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import {  Routes, Route} from "react-router-dom";
 import testData from "./assents/data.json";
 import Card from "./components/Card/Card";
 import Promo from "./components/Promo/Promo";
@@ -45,16 +45,18 @@ const App = () => {
                 setSearchResult={setSearchResult}
                 setModalOpen={setModalOpen}
             />
-            <BrowserRouter>
+
+            
+              
                 <Routes>
                     <Route path="/home" element={<Home />} />
                     <Route path="/catalog" element={<Catalog />} />
                     <Route path="/old" element={<OldPage searchText={searchResult}
-                    goods={goods} />
+                        goods={goods} />
                     } />
 
                 </Routes>
-            </BrowserRouter>
+           
             <Footer />
             <Modal
                 isActive={modalOpen}
