@@ -1,4 +1,4 @@
-import "./style.css"
+import Style from"./style.css";
 const Promo = (props) => {
     return (
         <div className="promo__block">

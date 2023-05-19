@@ -1,10 +1,15 @@
 import { useState, useEffect } from "react";
+
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import testData from "./assents/data.json";
 import Card from "./components/Card/Card";
 import Promo from "./components/Promo/Promo";
 import Modal from "./components/Modal";
 import { Header, Footer } from "./components/General";
-const promoData = ["=)", "*?*", ")("];
+import Home from "./pages/Home";
+import Catalog from "./pages/Catalog";
+import OldPage from "./pages/Old";
+
 
 const App = () => {
     /*const user = localStorage.getItem("user");*/
@@ -28,7 +33,7 @@ const App = () => {
     }, [user])
     useEffect(() => {
         console.log("token", token);
-}, [token])
+    }, [token])
     return (
         <>
 
@@ -40,15 +45,16 @@ const App = () => {
                 setSearchResult={setSearchResult}
                 setModalOpen={setModalOpen}
             />
-            <div>
-                {searchResult && <p className="search-result"> {searchResult} </p>}
-                <div className="container" >
-                    {goods.map((pro, i) => (<Card key={i} img={pro.pictures}
-                        name={pro.name} price={pro.price} />
-                    ))}
-                    {/*{promoData.map(el => <Promo key={el} text={el} />)}*/}
-                </div>
-            </div>
+            <BrowserRouter>
+                <Routes>
+                    <Route path="/home" element={<Home />} />
+                    <Route path="/catalog" element={<Catalog />} />
+                    <Route path="/old" element={<OldPage searchText={searchResult}
+                    goods={goods} />
+                    } />
+
+                </Routes>
+            </BrowserRouter>
             <Footer />
             <Modal
                 isActive={modalOpen}
