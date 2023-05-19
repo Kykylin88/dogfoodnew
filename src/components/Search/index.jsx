@@ -39,7 +39,7 @@ const Search = ({ data, setGoods, setSearchResult }) => {
         console.log(result);
     }, [text]);
     return <>
-        <input  className="search" type="search" value={text} onChange={changeValue} />
+        <input className="search" type="search" value={text} onChange={changeValue} />
         {/* <button onClick={changeText}>поиск {num} раз</button>*/}
         {/*text && <p> По запросу {text} найдено {num} товаров </p>*/}
     </>

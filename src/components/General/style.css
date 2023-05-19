@@ -13,7 +13,7 @@ header .search-block {
     width: 100%;
     display: flex;
     justify-content: center;
-    background-color: #222;
+    background-color:orange;
     color: yellow;
 }
 
@@ -79,11 +79,11 @@ footer {
 }*/
 @media (min-width:576px) {
     header {
-        flex-wrap: nowrap;
+        flex-wrap: no-wrap;
     }
 
 
-    header.search-block {
+    header .search-block {
         order: 0;
         width: auto;
 

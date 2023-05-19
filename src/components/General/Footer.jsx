@@ -8,13 +8,13 @@ const links = [
 
 ]
 const Footer = () => <footer>
-<div className="footer__copy">
-    <Logo />
-    <span >@{new Date().getFullYear()}</span>
+    <div className="footer__copy">
+        <Logo />
+        <span >@{new Date().getFullYear()}</span>
     </div>
     <ul className="footer__nav">
         {links.map(el => <li key={el.name}>
-          <a href={el.src}>{el.name}</a>
+            <a href={el.src}>{el.name}</a>
         </li>)}
     </ul>
 </footer>

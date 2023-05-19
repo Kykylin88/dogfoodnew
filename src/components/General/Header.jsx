@@ -15,12 +15,14 @@ const Header = ({
     upd, 
     searchArr, 
     setGoods, 
-    setSearchResult 
+    setSearchResult,
+    setModalOpen
 }) => {
    
     const login = () => {
-        localStorage.setItem("user12", " Sasha");
-        upd("Sasha");
+       setModalOpen(true)
+        //localStorage.setItem("user12", " Sasha");
+        //upd("Sasha");
     }
     
     const logout = () => {
